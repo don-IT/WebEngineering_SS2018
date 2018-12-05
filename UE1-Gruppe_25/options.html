@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <title>BIG Smart Production</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="styles/style.css" media="screen" />
+    </head>
+    <body>
+        <header>
+            <img src="images/big-logo-small.png" alt="Logo"/>
+            <h1>BIG Smart Production</h1>
+            <nav id="navigation">
+                <input type="submit" value="&#9776;" id="hamburgericon">
+                <div id="hamburgerpanel">
+                    <form action="overview.html">
+                        <input type="submit" value="Übersicht" class="navbutton">
+                    </form>
+                    <form action="login.html" >
+                        <input type="submit" value="Abmelden" class="navbutton">
+                    </form>
+                </div>
+            </nav>
+        </header>
+        <section id ="changepassword">
+            <form action="overview.html">
+                <h2>Passwort ändern</h2>
+                <label class="userlabel" for="oldpassword">Altes Passwort:</label>
+                <input type="password" id="oldpassword" name="oldpassword" class="password" placeholder="Altes Passwort" required>
+                <br/>
+                <label class="userlabel" for="newpassword">Neues Passwort:</label>
+                <input type="password" id="newpassword" name="newpassword" class="password" placeholder="Neues Passwort" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,12}">
+                <br/>
+                <label class="passwordlabel" for="repeatpassword">Passwort wiederholen:</label>
+                <input type="password" id="repeatpassword" name="repeatpassword" class="password" placeholder="Neues Passwort wiederholen" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,12}">
+                <br/>
+                <input type="submit" value="Änderung speichern" class="submit">
+            </form>
+        </section>
+        <footer class="f1">
+            <p>&copy; 2018 <span class="tooltip">BIG</span> Smart Production</p>
+        </footer>
+    </body>
+</html>

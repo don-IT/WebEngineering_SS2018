@@ -1,0 +1,497 @@
+body {
+     margin: 0px;
+}
+ .tooltip {
+     border-bottom: 1px dotted #88999b;
+}
+ section{
+     height: 100%;
+     width: 100%;
+     position: fixed;
+     background: linear-gradient(to bottom, rgba(206,206,206,0.3), rgba(206,206,206,1));
+}
+ header {
+     background:linear-gradient(to top, rgba(255, 168, 0, 1), rgba(255, 204, 0, 0.9));
+     box-shadow: 1px 1px 10px black;
+     display: flex;
+     align-items: center;
+}
+ header h1{
+     font-family: sans-serif;
+     font-size: 2em;
+}
+ header img{
+     float: left;
+     width: 3.5em;
+     margin: 1%;
+}
+ h2{
+     font-family: sans-serif;
+     font-size: 1.5em;
+     margin-left: 20%;
+     margin-top: 3%;
+     color: #333333;
+}
+ .userlabel {
+     margin-left: 20%;
+     width:25%;
+     display:inline-block;
+     box-sizing: border-box;
+     margin-bottom: 1.5%;
+     font-family: sans-serif;
+     font-size: 0.9em;
+     font-weight: bold;
+}
+ .passwordlabel {
+     margin-left: 20%;
+     margin-bottom: 1.5%;
+     width:25%;
+     display:inline-block;
+     box-sizing: border-box;
+     font-family: sans-serif;
+     font-size: 0.9em;
+     font-weight: bold;
+}
+ input[type="text"] {
+     border: 1px solid #ccc;
+     display: inline-block;
+     border-radius: 5px;
+     width:30%;
+     margin-right: 20%;
+     box-sizing: border-box;
+     height:2.2em;
+     font-size:1em;
+     padding-left:0.5%;
+}
+ .password {
+     border: 1px solid #ccc;
+     display: inline-block;
+     border-radius: 5px;
+     width:30%;
+     margin-right: 20%;
+     box-sizing: border-box;
+     height:2.2em;
+     font-size:1em;
+     padding-left:0.5%;
+}
+ .submit{
+     font-size: 0.9em;
+     color: black;
+     background: linear-gradient(to top, rgba(0, 51, 102,1), rgba(0, 89, 179,0.8));
+     font-family: sans-serif;
+     border: 1px solid #ccc;
+     border-radius: 5px;
+     width: 30%;
+     height: 3em;
+     margin:0 auto;
+     display:block;
+}
+ footer{
+     position: fixed;
+     bottom: 0px;
+     margin-bottom: 0px;
+     width:100%;
+     text-align: center;
+     margin: auto;
+     font-family: sans-serif;
+     font-size: 0.9em;
+     color: #88999b;
+}
+ input:invalid ~ .submit {
+     background: linear-gradient(to top, rgba(137,150,153,1), rgba(137,150,153,0.8));
+}
+ #navigation {
+     margin-left: auto;
+     margin-right: 1%;
+}
+ #hamburgericon {
+     display:none;
+}
+ .navbutton {
+     font-size: 0.9em;
+     color: white;
+     background: linear-gradient(to top, rgba(0, 51, 102,1), rgba(0, 89, 179,0.8));
+     font-family: sans-serif;
+     border: 1px solid #0059b3;
+     border-radius: 5px;
+     width: 15vw;
+     max-width: 9em;
+     height: 3em;
+}
+ #hamburgerpanel > form {
+     display: inline;
+}
+ @media only screen and (min-width: 630px) and (max-width: 767px){
+     header {
+         background:linear-gradient(to top, rgba(255, 168, 0, 1), rgba(255, 204, 0, 0.9));
+         box-shadow: 1px 1px 10px black;
+         display: flex;
+         align-items: center;
+    }
+     header h1{
+         font-family: sans-serif;
+         font-size: 2em;
+    }
+     header img{
+         float: left;
+         width: 3.5em;
+         margin: 1%;
+    }
+     h2{
+         font-family: sans-serif;
+         font-size: 1.5em;
+         margin-left: 10%;
+         margin-top: 3%;
+         color: #333333;
+    }
+     .userlabel {
+         margin-left: 10%;
+         width:35%;
+         display:inline-block;
+         box-sizing: border-box;
+         margin-bottom: 2%;
+         font-family: sans-serif;
+         font-size: 0.9em;
+         font-weight: bold;
+    }
+     .passwordlabel {
+         margin-left: 10%;
+         margin-bottom: 2%;
+         width:35%;
+         display:inline-block;
+         box-sizing: border-box;
+         font-family: sans-serif;
+         font-size: 0.9em;
+         font-weight: bold;
+    }
+     input[type="text"] {
+         border: 1px solid #ccc;
+         display: inline-block;
+         border-radius: 5px;
+         width:40%;
+         margin-right: 10%;
+         box-sizing: border-box;
+         height:2.2em;
+         font-size:1em;
+         padding-left:0.5%;
+    }
+     .password {
+         border: 1px solid #ccc;
+         display: inline-block;
+         border-radius: 5px;
+         width:40%;
+         margin-right: 10%;
+         box-sizing: border-box;
+         height:2.2em;
+         font-size:1em;
+         padding-left:0.5%;
+    }
+     .submit{
+         font-size: 0.9em;
+         color: black;
+         background: linear-gradient(to top, rgba(0, 51, 102,1), rgba(0, 89, 179,0.8));
+         font-family: sans-serif;
+         border: 1px solid #ccc;
+         border-radius: 5px;
+         width: 40%;
+         height: 3em;
+         margin:0 auto;
+         display:block;
+    }
+     footer{
+         position: fixed;
+         bottom: 0px;
+         margin-bottom: 0px;
+         width:100%;
+         text-align: center;
+         margin: auto;
+         font-family: sans-serif;
+         font-size: 0.9em;
+         color: #88999b;
+    }
+     input:invalid ~ .submit {
+         background: linear-gradient(to top, rgba(137,150,153,1), rgba(137,150,153,0.8));
+    }
+}
+ @media only screen and (min-width: 400px) and (max-width: 629px){
+     header {
+         background:linear-gradient(to top, rgba(255, 168, 0, 1), rgba(255, 204, 0, 0.9));
+         box-shadow: 1px 1px 10px black;
+         display: flex;
+         align-items: center;
+    }
+     header h1{
+         font-family: sans-serif;
+         font-size: 1.5em;
+    }
+     header img{
+         float: left;
+         width: 3.5em;
+         margin: 1.5%;
+    }
+     h2{
+         font-family: sans-serif;
+         font-size: 1.5em;
+         margin-left: 2%;
+         margin-top: 4%;
+         color: #333333;
+    }
+     .userlabel {
+         margin-left: 2%;
+         width:45%;
+         display:inline-block;
+         box-sizing: border-box;
+         margin-bottom: 3%;
+         font-family: sans-serif;
+         font-size: 0.9em;
+         font-weight: bold;
+    }
+     .passwordlabel {
+         margin-left: 2%;
+         margin-bottom: 3%;
+         width:45%;
+         display:inline-block;
+         box-sizing: border-box;
+         font-family: sans-serif;
+         font-size: 0.9em;
+         font-weight: bold;
+    }
+     input[type="text"] {
+         border: 1px solid #ccc;
+         display: inline-block;
+         border-radius: 5px;
+         width:50%;
+         margin-right: 2%;
+         box-sizing: border-box;
+         height:2.2em;
+         font-size:1em;
+         padding-left:0.5%;
+    }
+     .password {
+         border: 1px solid #ccc;
+         display: inline-block;
+         border-radius: 5px;
+         width:50%;
+         margin-right: 2%;
+         box-sizing: border-box;
+         height:2.2em;
+         font-size:1em;
+         padding-left:0.5%;
+    }
+     .submit{
+         font-size: 0.9em;
+         color: black;
+         background: linear-gradient(to top, rgba(0, 51, 102,1), rgba(0, 89, 179,0.8));
+         font-family: sans-serif;
+         border: 1px solid #ccc;
+         border-radius: 5px;
+         width: 40%;
+         height: 3em;
+         margin:0 auto;
+         display:block;
+    }
+     footer{
+         position: fixed;
+         bottom: 0px;
+         margin-bottom: 0px;
+         width:100%;
+         text-align: center;
+         margin: auto;
+         font-family: sans-serif;
+         font-size: 0.9em;
+         color: #88999b 
+    }
+     input:invalid ~ .submit {
+         background: linear-gradient(to top, rgba(137,150,153,1), rgba(137,150,153,0.8));
+    }
+     #navigation {
+         margin-left: auto;
+         margin-right: 1%;
+    }
+     #hamburgericon {
+         font-size: 0.9em;
+         color: white;
+         background: linear-gradient(to top, rgba(0, 51, 102,1), rgba(0, 89, 179,0.8));
+         font-family: sans-serif;
+         border: 1px solid #0059b3;
+         border-radius: 5px;
+         width: 3em;
+         height: 3em;
+         display:block;
+    }
+     .navbutton {
+         font-size: 0.9em;
+         color: white;
+         background: linear-gradient(to top, rgba(0, 51, 102,1), rgba(0, 89, 179,0.8));
+         font-family: sans-serif;
+         border: 1px solid #0059b3;
+         border-radius: 5px;
+         width: 9em;
+         height: 3em;
+         display:block;
+         margin: auto;
+         margin-top: 3.5%;
+    }
+     #hamburgerpanel {
+         display: none;
+         z-index: 10;
+         position:absolute;
+         margin-left: -6em;
+         background-color: white;
+         border-radius: 5px;
+         width: 8.6em;
+         height: 6.3em;
+         vertical-align: middle;
+    }
+     #hamburgericon:hover ~ #hamburgerpanel {
+         display: block;
+    }
+     #hamburgerpanel:hover {
+         display: block;
+    }
+}
+ @media only screen and (max-width: 399px) {
+     header {
+         background:linear-gradient(to top, rgba(255, 168, 0, 1), rgba(255, 204, 0, 0.9));
+         box-shadow: 1px 1px 10px black;
+         display: flex;
+         align-items: center;
+    }
+     header h1{
+         font-family: sans-serif;
+         font-size: 6.5vw;
+         width:100%;
+         text-align: center;
+    }
+     header img{
+         float: left;
+         width: 3em;
+         margin: 2% 0% 2% 2%;
+    }
+     h2{
+         font-family: sans-serif;
+         font-size: 1.5em;
+         margin-left: 2%;
+         margin-top: 12%;
+         color: #333333;
+    }
+     .userlabel {
+         margin-left: 2%;
+         width:45%;
+         display:inline-block;
+         box-sizing: border-box;
+         margin-bottom: 1%;
+         font-family: sans-serif;
+         font-size: 0.9em;
+         font-weight: bold;
+    }
+     .passwordlabel {
+         margin-left: 2%;
+         margin-bottom: 1%;
+         width:98%;
+         display:inline-block;
+         box-sizing: border-box;
+         font-family: sans-serif;
+         font-size: 0.9em;
+         font-weight: bold;
+    }
+     input[type="text"] {
+         border: 1px solid #ccc;
+         display: inline-block;
+         border-radius: 5px;
+         width:96%;
+         margin-right: 2%;
+         margin-left: 2%;
+         margin-bottom: 4%;
+         box-sizing: border-box;
+         height:2.2em;
+         font-size:1em;
+         padding-left:0.5%;
+    }
+     .password {
+         border: 1px solid #ccc;
+         display: inline-block;
+         border-radius: 5px;
+         width:96%;
+         margin-right: 2%;
+         margin-left: 2%;
+         margin-bottom: 4%;
+         box-sizing: border-box;
+         height:2.2em;
+         font-size:1em;
+         padding-left:0.5%;
+    }
+     .submit{
+         font-size: 0.9em;
+         color: black;
+         background: linear-gradient(to top, rgba(0, 51, 102,1), rgba(0, 89, 179,0.8));
+         font-family: sans-serif;
+         border: 1px solid #ccc;
+         border-radius: 5px;
+         width:96%;
+         height: 3em;
+         margin:0 auto;
+         display:block;
+    }
+     footer{
+         position: fixed;
+         bottom: 0px;
+         margin-bottom: 0px;
+         width:100%;
+         text-align: center;
+         margin: auto;
+         font-family: sans-serif;
+         font-size: 0.9em;
+         color: #88999b 
+    }
+     input:invalid ~ .submit {
+         background: linear-gradient(to top, rgba(137,150,153,1), rgba(137,150,153,0.8));
+    }
+     #navigation {
+         margin-left: auto;
+         margin-right: 1%;
+    }
+     #hamburgericon {
+         font-size: 0.9em;
+         color: white;
+         background: linear-gradient(to top, rgba(0, 51, 102,1), rgba(0, 89, 179,0.8));
+         font-family: sans-serif;
+         border: 1px solid #0059b3;
+         border-radius: 5px;
+         width: 3em;
+         height: 3em;
+         display:block;
+    }
+     .navbutton {
+         font-size: 0.9em;
+         color: white;
+         background: linear-gradient(to top, rgba(0, 51, 102,1), rgba(0, 89, 179,0.8));
+         font-family: sans-serif;
+         border: 1px solid #0059b3;
+         border-radius: 5px;
+         width: 9em;
+         height: 3em;
+         display:block;
+         margin: auto;
+         margin-top: 3.5%;
+    }
+     #hamburgerpanel {
+         display: none;
+         z-index: 10;
+         position:absolute;
+         margin-left: -6em;
+        /*margin-top: -5em;
+        */
+         background-color: white;
+         border-radius: 5px;
+         width: 8.6em;
+         height: 6.3em;
+         vertical-align: middle;
+    }
+     #hamburgericon:hover ~ #hamburgerpanel {
+         display: block;
+    }
+     #hamburgerpanel:hover {
+         display: block;
+    }
+}

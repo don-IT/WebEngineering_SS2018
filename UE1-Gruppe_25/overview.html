@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <title>BIG Smart Production</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="styles/overviewstyle.css" media="screen" />
+    </head>
+    <body>
+        <header>
+            <img src="images/big-logo-small.png" alt="Logo"/>
+            <h1>BIG Smart Production</h1>
+            <nav id="navigation">
+                <input type="submit" value="&#9776;" id="hamburgericon">
+                <div id="hamburgerpanel">
+                    <form action="options.html">
+                        <input type="submit" value="Optionen" class="navbutton">
+                    </form>
+                    <form action="login.html">
+                        <input type="submit" value="Abmelden" class="navbutton">
+                    </form>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <aside id="sidepanel">
+                <h2 class="overview2">Verfügbare Verbindungen</h2>
+                <div class="verbindung movable">
+                    <img id="bild2" src="images/arrow.svg" alt="arrow">  
+                    <div class="box">
+                        <p class="textinbox" >Verbindung</p>
+                    </div>
+                </div>
+                <h2 class="overview">Verfügbare Elemente</h2>
+                <div class="doublebox">
+                    <div class="left movable">
+                        <img class="bild" src="images/item_generator.svg" alt="drucker">  
+                        <div class="box">
+                            <p class="textinbox" >3D-Drucker</p>
+                        </div>
+                    </div>
+                    <div class="right movable">
+                        <img class="bild" src="images/machine.svg" alt="machine"> 
+                        <div class="box">
+                            <p class="textinbox" >Maschine</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="doublebox">
+                    <div class="left movable">
+                        <img class="bild" src="images/conveyor.svg" alt="coveyor"> 
+                        <div class="box">
+                            <p class="textinbox" >Förderband</p>
+                        </div>
+                    </div>
+                    <div class="right movable">
+                        <img class="bild" src="images/intelligent_conveyor.svg" alt="intelligent_conveyor"> 
+                        <div class="box">
+                            <p class="textinbox">Intelligentes Förderband</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="doublebox">
+                    <div class="left movable">
+                        <img class="bild" src="images/interim_storage.svg" alt="interim_storage">
+                        <div class="box">
+                            <p class="textinbox">Tempörares Lager</p>
+                        </div>
+                    </div>
+                    <div class="right movable">
+                        <img class="bild" src="images/end_storage.svg" alt="end_storage">
+                        <div class="box">
+                            <p class="textinbox">Endlager</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="doublebox">
+                    <div class="left movable">
+                        <img class="bild" src="images/trash_storage.svg" alt="trash_storage"> 
+                        <div class="box">
+                            <p class="textinbox">Müllager</p>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+            <section id="mainpanel">
+                <div id="headerscontainer">
+                    <h2 class="mainpanelh2">Produktionskette</h2>
+                    <h3>8 Elemente - 9 Pfeile - 0 Produkte</h3>
+                </div>
+                <div id="chain">
+                    <div class="machinebox movable" id="drucker1">
+                        <img class="image" src="images/item_generator.svg" alt="coveyor"> 
+                        <div class="descriptionbox">
+                            <p class="textinbox1">3D-Drucker 1</p>
+                            <div class="textinbox3">Vorgänger: </div>
+                            <div class="textinbox3">Nachfolger: <br/>
+                                Maschine 2
+                            </div>
+                        </div>
+                    </div>
+                    <div class="machinebox movable" id="maschine2">
+                        <img class="image" src="images/machine.svg" alt="coveyor"> 
+                        <div class="descriptionbox">
+                            <p class="textinbox1">Maschine 2</p>
+                            <div class="textinbox3">Vorgänger: <br/>
+                                3d-Drucker 1, 3D-Drucker 3 
+                            </div>
+                            <div class="textinbox3">Nachfolger: <br/>
+                                Förderband 4, Intelligentes Förderband 5
+                            </div>
+                        </div>
+                    </div>
+                    <div class="machinebox movable" id="drucker3">
+                        <img class="image" src="images/item_generator.svg" alt="coveyor"> 
+                        <div class="descriptionbox">
+                            <p class="textinbox1">3D-Drucker 3</p>
+                            <div class="textinbox3">Vorgänger: </div>
+                            <div class="textinbox3">Nachfolger: <br/>
+                                Maschine 2
+                            </div>
+                        </div>
+                    </div>
+                    <div class="machinebox movable" id="foerderband4">
+                        <img class="image" src="images/conveyor.svg" alt="coveyor"> 
+                        <div class="descriptionbox">
+                            <p class="textinbox1">Förderband 4</p>
+                            <div class="textinbox3">Vorgänger: <br/>
+                                Maschine 2 
+                            </div>
+                            <div class="textinbox3">Nachfolger: <br/>
+                                Temproräres Lager 6
+                            </div>
+                        </div>
+                    </div>
+                    <div class="machinebox movable" id="intelfoerderband5">
+                        <img class="image" src="images/intelligent_conveyor.svg" alt="coveyor"> 
+                        <div class="descriptionbox">
+                            <p class="textinbox1">Intelligentes Förderband 5</p>
+                            <div class="textinbox3">Vorgänger: <br/>
+                                Maschine 2 
+                            </div>
+                            <div class="textinbox3">Nachfolger: <br/>
+                                Temproräres Lager 6, Endlager 8
+                            </div>
+                        </div>
+                    </div>
+                    <div class="machinebox movable" id="templager6">
+                        <img class="image" src="images/interim_storage.svg" alt="coveyor"> 
+                        <div class="descriptionbox">
+                            <p class="textinbox1">Temproräres Lager 6</p>
+                            <div class="textinbox3">Vorgänger: <br/>
+                                Förderband 4, Intelligentes Förderband 5, Müllager 7, Endlager 8 
+                            </div>
+                            <div class="textinbox3">Nachfolger: </div>
+                        </div>
+                    </div>
+                    <div class="machinebox movable" id="muelllager7">
+                        <img class="image" src="images/trash_storage.svg" alt="coveyor"> 
+                        <div class="descriptionbox">
+                            <p class="textinbox1">Mülllager 7</p>
+                            <div class="textinbox3">Vorgänger:</div>
+                            <div class="textinbox3">Nachfolger: <br/>
+                                Temproräres Lager 6
+                            </div>
+                        </div>
+                    </div>
+                    <div class="machinebox movable" id="endlager8">
+                        <img class="image" src="images/end_storage.svg" alt="coveyor"> 
+                        <div class="descriptionbox">
+                            <p class="textinbox1">Endlager 8</p>
+                            <div class="textinbox3">Vorgänger: <br/>
+                                Intelligentes Förderband 
+                            </div>
+                            <div class="textinbox3">Nachfolger: <br/>
+                                Temproräres Lager 6
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="editform">
+                    <div class="formelement">
+                        <label for="formelement1input"><strong>3D-Drucker</strong> <br/> (Zustand)</label>
+                        <br/>
+                        <select name="formelement1input" id="formelement1input">
+                            <option>Teilweise fertig</option>
+                            <option>Unfertig</option>
+                            <option>Fertig</option>
+                        </select>
+                    </div>
+                    <div class="formelement">
+                        <label for="formelement2input"><strong>Maschine</strong> <br/> (Temperatur)</label>
+                        <br/>
+                        <input type="text" id="formelement2input" name="formelement2input" value="35" />
+                    </div>
+                    <div class="formelement">
+                        <label for="formelement3input"><strong>Temproräres Lager</strong> <br/> (Anzahl)</label>
+                        <br/>
+                        <input type="text" id="formelement3input" name="formelement3input" value="7" />
+                    </div>
+                    <div class="formelement">
+                        <label for="formelement4input"><strong>Endlager</strong> <br/> (Anzahl)</label>
+                        <br/>
+                        <input type="text" id="formelement4input" name="formelement4input" value="4" />
+                    </div>
+                    <div class="formelement">
+                        <label for="formelement5input"><strong>Mülllager</strong> <br/> (Anzahl)</label>
+                        <br/>
+                        <input type="text" id="formelement5input" name="formelement5input" value="3" />
+                    </div>
+                    <div class="formelement">
+                        <label for="formelement6input"><strong>Förderband</strong> <br/> (Ein/Aus)</label>
+                        <br/>
+                        <input type="checkbox" id="formelement6input" name="formelement6input" checked />
+                    </div>
+                    <div class="formelement">
+                        <label for="formelement7input"><strong>Intelligentes Förderband</strong> <br/> (Ein/Aus)</label>
+                        <br/>
+                        <input type="checkbox" id="formelement7input" name="formelement7input" checked />
+                    </div>
+                    <div class="formelement">
+                        <input type="submit" value="Geräte aktualisieren" class="submit" />
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2018 <span class="tooltip">BIG</span> Smart Production</p>
+        </footer>
+    </body>
+</html>
