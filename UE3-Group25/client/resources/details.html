@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <title>BIG Smart Production - Gerätedetails</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body data-decimal-separator="," data-grouping-separator=".">
+
+<div role="navigation" aria-label="jumplinks" class="accessibility">
+    <a href="#deviceheadline">Zum Inhalt springen</a>
+</div>
+
+<header aria-labelledby="bannerheadline">
+    <a href="overview.html">
+        <img class="title-image" src="images/big-logo-small.png" title="BIG Smart Production Logo"
+             alt="BIG Smart Production Logo">
+    </a>
+    <h1 class="header-title" id="bannerheadline">
+        BIG Smart Production
+    </h1>
+    <nav aria-labelledby="navigationheadline">
+        <h2 class="accessibility" id="navigationheadline">Navigation</h2>
+        <ul class="navigation-list">
+            <li class="overflow-icon">
+                <a href="#" class="button" accesskey="1">☰</a>
+            </li>
+            <li class="nav-items">
+                <ul>
+                    <li><a href="overview.html" class="button" accesskey="1">Übersicht</a></li>
+                    <li><a href="options.html" class="button" accesskey="2">Optionen</a></li>
+                    <li><a href="login.html" class="button" accesskey="3">Abmelden</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<div class="main-container">
+    <main aria-labelledby="deviceheadline" class="details">
+        <h2 id="deviceheadline">Intelligentes Förderband 3</h2>
+
+        <div class="details-container">
+            <div class="details-image-container">
+                ### ADD CHART HERE ###
+            </div>
+            <div class="details-control-container">
+                <label class="accessibility" for="details-log">Letzte Werteänderungen</label>
+                <textarea id="details-log" class="details-logs" placeholder="Gerätelog" readonly rows="6">
+22.4.2018, 21:08:49: Aus -> An
+22.4.2018, 21:08:49: An -> Aus
+22.4.2018, 21:08:50: Aus -> An
+22.4.2018, 21:08:51: An -> Aus
+22.4.2018, 21:08:52: Aus -> Aus
+22.4.2018, 21:08:53: Aus -> An
+22.4.2018, 21:08:54: An -> Aus
+22.4.2018, 21:08:55: Aus -> An
+22.4.2018, 21:08:56: An -> An
+22.4.2018, 21:08:57: An -> An
+22.4.2018, 21:08:58: An -> An
+                </textarea>
+
+                <div class="details-settings">
+                    <h3>Ein-/Ausschalten</h3>
+
+                    <form>
+                        <label class="form-label">derzeit: An</label>
+
+                        <label class="accessibility" for="value">Bitte gewünschten Wert auswählen.</label>
+                        <input type="checkbox" class="form-input" id="value" name="value">
+                        <button class="button button-submit">Wert setzen</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </main>
+</div>
+
+<footer>
+    © 2018 <abbr title="Business Informatics Group">BIG</abbr> Smart Production
+</footer>
+</body>
+</html>

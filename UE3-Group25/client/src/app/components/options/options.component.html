@@ -1,0 +1,28 @@
+<main aria-labelledby="formheadline">
+  <form class="form form-horizontal" method="post" (ngSubmit)="onSubmit(pwdChangeForm)" #pwdChangeForm="ngForm">
+      <h2 id="formheadline" class="options-headline">Passwort ändern</h2>
+      <div class="form-row">
+          <label class="form-label" for="old-password-input">Altes Passwort</label>
+          <input type="password" class="form-input" name="oldpassword" id="old-password-input"
+                 placeholder="Altes Passwort" required autocomplete="current-password" #oldpassword="ngModel" ngModel ngControl="oldpwd">
+      </div>
+      <div class="form-row">
+          <label class="form-label" for="new-password-input">Neues Passwort</label>
+          <input type="password" class="form-input" name="newpassword" id="new-password-input"
+                 placeholder="Neues Passwort" required minlength="8" maxlength="12"
+                 autocomplete="new-password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,12}"
+                 title="8-12 Zeichen, jeweils mindestens ein Großbuchstabe, Kleinbuchstabe und eine Zahl" #newpassword="ngModel" ngModel>
+      </div>
+      <div class="form-row">
+          <label class="form-label" for="repeat-password-input">Passwort wiederholen</label>
+          <input type="password" class="form-input" name="repeatpassword" id="repeat-password-input"
+                 placeholder="Neues Passwort wiederholen" required minlength="8" maxlength="12"
+                 autocomplete="new-password" #repeatpassword="ngModel" ngModel>
+      </div>
+      <div *ngIf="validationErrorMessage" class="form-row form-row-center error-text">{{validationErrorMessage}}</div>
+      <div *ngIf="serverMessage" [class.error-text]="isErrorMessage" class="form-row form-row-center">{{serverMessage}}</div>
+      <div class="form-row form-row-center">
+          <button id="save-changes-button" class="button button-submit" [disabled]="!pwdChangeForm.form.valid || !passwordsEqual(pwdChangeForm)">Änderung speichern</button>
+      </div>
+  </form>
+</main>

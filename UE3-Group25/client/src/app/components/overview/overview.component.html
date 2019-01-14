@@ -1,0 +1,99 @@
+<aside class="elements" aria-labelledby="elementsheadline" aria-hidden="true">
+  <h2 id="arrowsheadline">Verfügbare Verbindungen</h2>
+  <ul class="arrow-list">
+      <li class="arrow" id="arrow-sidebar-add" aria-labelledby="connector" tabindex="0" title="Verbindung" #arrowAddRef>
+          <dl class="arrow-properties">
+              <dt class="accessibility">Elementtyp</dt>
+              <dd id="connector" class="arrow-type">Verbindung</dd>
+          </dl>
+          <div class="arrow-image">
+              <svg width="72px" height="20px">
+                  <defs>
+                      <marker id="arrow-marker-side" markerWidth="10" markerHeight="10" refY="4" orient="auto">
+                          <path d="M0,0 L0,8 L8,4 z" class="arrow-marker"></path>
+                      </marker>
+                  </defs>
+                  <path d="M0,10 L70,10" class="arrow-path" marker-end="url(#arrow-marker-side)"></path>
+              </svg>
+          </div>
+      </li>
+  </ul>
+  <h2 id="elementsheadline">Verfügbare Elemente</h2>
+  <ul id="devices" class="device-list draggables">
+    <li *ngFor="let availableDevice of devices" app-available-device [data]="availableDevice"></li>
+  </ul>
+</aside>
+
+<main aria-labelledby="diagramheadline">
+  <div class="diagram-header">
+      <h2 class="main-headline" id="diagramheadline">Produktionskette</h2>
+      <div id="counter" class="diagram-header-right">
+          <span class="devices-counter">0</span> Elemente -
+          <span class="arrows-counter">0</span> Pfeile -
+          <span class="product-counter">0</span> Produkte
+      </div>
+  </div>
+
+  <app-diagram [arrowAdd]="arrowAddRef"></app-diagram>
+
+  <form id="controls" class="device-controls">
+      <div class="form-row">
+          <label class="form-label" for="control-item-generator">
+              3D-Drucker
+              <small class="sub">(Zustand)</small>
+          </label>
+          <select id="control-item-generator" name="item-generator" class="form-input">
+              <option value="0">Unfertig</option>
+              <option value="1" selected>Teilweise fertig</option>
+              <option value="2">Fertig</option>
+          </select>
+      </div>
+      <div class="form-row">
+          <label class="form-label" for="control-machine">
+              Maschine
+              <span class="sub">(Temperatur)</span>
+          </label>
+          <input type="number" id="control-machine" name="machine" class="form-input" value="35">
+      </div>
+      <div class="form-row">
+          <label class="form-label" for="control-interim-storage">
+              Temporäres Lager
+              <span class="sub">(Anzahl)</span>
+          </label>
+          <input type="number" id="control-interim-storage" name="interim-storage" class="form-input" value="7"
+                 min="0">
+      </div>
+      <div class="form-row">
+          <label class="form-label" for="control-end-storage">
+              Endlager
+              <span class="sub">(Anzahl)</span>
+          </label>
+          <input type="number" id="control-end-storage" name="end-storage" class="form-input" value="4" min="0">
+      </div>
+      <div class="form-row">
+          <label class="form-label" for="control-trash-storage">
+              Mülllager
+              <span class="sub">(Anzahl)</span>
+          </label>
+          <input type="number" id="control-trash-storage" name="trash-storage" class="form-input" value="3"
+                 min="0">
+      </div>
+      <div class="form-row">
+          <label class="form-label" for="control-conveyor">
+              Förderband
+              <span class="sub">(Ein/Aus)</span>
+          </label>
+          <input type="checkbox" id="control-conveyor" name="conveyor" checked>
+      </div>
+      <div class="form-row">
+          <label class="form-label" for="control-intelligent-conveyor">
+              Intelligentes Förderband
+              <span class="sub">(Ein/Aus)</span>
+          </label>
+          <input type="checkbox" id="control-intelligent-conveyor" name="intelligent-conveyor" checked>
+      </div>
+      <div class="form-row device-update">
+          <button type="submit" class="button">Geräte aktualisieren</button>
+      </div>
+  </form>
+</main>
